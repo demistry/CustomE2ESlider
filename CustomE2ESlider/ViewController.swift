@@ -10,9 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    let rangeSlider = RangeSlider(frame: .zero)
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        rangeSlider.backgroundColor = .red
+        view.addSubview(rangeSlider)
+    }
+    
+    
+    override func viewDidLayoutSubviews() {
+        let margin: CGFloat = 2.0
+        let width = view.bounds.width - 2.0 * margin
+        rangeSlider.frame = CGRect(x: margin, y: margin + view.safeAreaInsets.top, width: width, height: 31)
     }
 
 
