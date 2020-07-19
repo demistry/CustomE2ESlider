@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        rangeSlider.backgroundColor = .red
         view.addSubview(rangeSlider)
         rangeSlider.addTarget(self, action: #selector(rangeSliderValueChanged), for: .valueChanged)
     }
