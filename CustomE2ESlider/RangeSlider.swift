@@ -116,6 +116,8 @@ class RangeSlider: UIControl {
         updateLayerFrames()
 
         CATransaction.commit()
+        
+        sendActions(for: .valueChanged)
 
         return true
     }
